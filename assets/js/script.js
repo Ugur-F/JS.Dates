@@ -36,3 +36,29 @@ function updateTimes() {
 
 updateTimes();
 
+console.log("================================================");
+//====================================================================================//
+
+const myBday = new Date("september 24, 2000");
+let currentDay = new Date();
+
+function daysinceBday() {
+  // let daysinceBday = (currentDay-myBday); reponse en millisecondes
+  let daySinceBday = Math.floor((currentDay - myBday) / (1000 * 60 * 60 * 24)); //réponse en jours
+  console.log("Nombre de jour écoulés depuis ma naissance: " + daySinceBday + " days");
+}
+daysinceBday();
+
+//--
+
+let currentDate = new Date();
+function daysCalculator(newDateString, currentDate) {
+  let newDate = new Date(newDateString);
+  let results = Math.floor((currentDate - newDate) / (1000 * 60 * 60 * 24));
+  console.log(results + " jours se sont écoulés depuis " + newDate);
+}
+
+daysCalculator("2023-10-01", currentDate);
+daysCalculator("1997-06-04", currentDate);
+daysCalculator("2003-10-30", currentDate);
+daysCalculator("1-10-2023", currentDate); 
