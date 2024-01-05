@@ -62,3 +62,22 @@ daysCalculator("2023-10-01", currentDate);
 daysCalculator("1997-06-04", currentDate);
 daysCalculator("2003-10-30", currentDate);
 daysCalculator("1-10-2023", currentDate); 
+
+
+console.log("================================================");
+//====================================================================================//
+
+let today80kh = new Date(Date.now() + 80000 * 60 * 60 * 1000); // Transformer les 80.000h en millisecondes (80000*60*60*1000)
+console.log("Dans 80.000 heures, nous serons le " + today80kh);
+
+//--
+
+let inputHours = document.getElementById("inputHours");
+
+inputHours.addEventListener("keyup", displayResults);
+
+function displayResults() {
+  let addedHours = inputHours.value;
+  let updateDate = new Date(Date.now() + addedHours * (60 * 60 * 1000)); 
+  console.log(updateDate);
+}
